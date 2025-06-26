@@ -9,6 +9,7 @@
 🔭 I’m currently working on:
 -   [TAW Voice Activity Bot](https://github.com/Sic4rioDragon/Discord-Voice-Activity-Tracker-Bot)
 -   [TAW Ticket Bot](https://github.com/Sic4rioDragon/TAW-Ticket-Bot)
+-  Planing to make a Streamcord free where i would want to give people the ability to use select premium features of streamcord for free, like "Automatically clean up when the stream ends".
 
 
 - Learning **Unity, Unreal**
