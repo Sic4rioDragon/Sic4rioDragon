@@ -7,7 +7,8 @@
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=sic4riodragon" alt="sic4riodragon" /></a> </p>
 
 🔭 I’m currently working on:
--   [TAW Voice Activity Bot](https://github.com/Sic4rioDragon/Discord-Voice-Activity-Tracker-Bot)
+-   [TAW Voice Activity Bot](https://github.com/Sic4rioDragon/Discord-Voice-Activity-Tracker-Bot) [Todo List](https://trello.com/b/HLqgkjHm/taw-activity-bot)
+-   DayZ AI Mod (Future Ready or Not Mod) [Todo List](https://trello.com/b/ZaF0qdTl/sic4rioai)
 -   [TAW Ticket Bot](https://github.com/Sic4rioDragon/TAW-Ticket-Bot)
 -  Planing to make a Streamcord free where i would want to give people the ability to use select premium features of streamcord for free, like "Automatically clean up when the stream ends".
 
