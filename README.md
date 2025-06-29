@@ -12,8 +12,13 @@
 -   [TAW Ticket Bot](https://github.com/Sic4rioDragon/TAW-Ticket-Bot)
 -  Planing to make a Streamcord free where i would want to give people the ability to use select premium features of streamcord for free, like "Automatically clean up when the stream ends".
 
+### My todo lists:
+- [Voice Channel activity Tracker bot](https://trello.com/b/HLqgkjHm/taw-activity-bot)
+- [DayZ AI Mod (Hopefully Future Ready or Not Mod)](https://trello.com/b/ZaF0qdTl/sic4rioai)
 
-- Learning **Unity, Unreal**
+
+#### Learning
+-  **Unity, Unreal**
 
 <p align="left">
 </p>
