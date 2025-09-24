@@ -1,0 +1,43 @@
+name: generate breakout svg
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # daily at 01:00 UTC
+  workflow_dispatch:
+
+jobs:
+  generate-svg:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate SVG (defaults)
+        uses: cyprieng/github-breakout@v1
+        with:
+          github_username: ${{ github.repository_owner }}
+
+      - name: Stage generated SVGs
+        run: |
+          mkdir -p /tmp/breakout
+          mv output/light.svg /tmp/breakout/breakout-light.svg
+          mv output/dark.svg  /tmp/breakout/breakout-dark.svg
+
+      - name: Configure Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit to orphan branch `github-breakout`
+        run: |
+          git checkout --orphan github-breakout
+          git rm -rf . || true
+          mkdir -p images
+          mv /tmp/breakout/* images/
+          git add images
+          git commit -m "chore: update Breakout SVGs" || echo "No changes"
+          git push --force origin github-breakout
