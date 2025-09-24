@@ -2,7 +2,7 @@ name: generate breakout svg
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # daily 01:00 UTC
+    - cron: "0 1 * * *"   # daily 01:00 UTC (~03:00/02:00 Europe/Vienna depending on DST)
   workflow_dispatch:
 
 jobs:
@@ -16,28 +16,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate SVGs (defaults)
+      - name: Generate SVG (defaults)
         uses: cyprieng/github-breakout@v1.0.0
         with:
           github_username: ${{ github.repository_owner }}
 
-      - name: Stage generated SVGs
+      - name: Move images into repo
         run: |
-          mkdir -p /tmp/breakout
-          mv output/light.svg /tmp/breakout/breakout-light.svg
-          mv output/dark.svg  /tmp/breakout/breakout-dark.svg
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit to orphan branch github-breakout
-        run: |
-          git checkout --orphan github-breakout
-          git rm -rf . || true
           mkdir -p images
-          mv /tmp/breakout/* images/
-          git add images
-          git commit -m "chore: update Breakout SVGs" || echo "No changes"
-          git push --force origin github-breakout
+          mv output/light.svg images/breakout-light.svg
+          mv output/dark.svg  images/breakout-dark.svg
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/breakout-light.svg images/breakout-dark.svg
+          git commit -m "chore: update breakout SVGs" || echo "No changes"
+          git push
