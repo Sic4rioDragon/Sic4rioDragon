@@ -2,7 +2,7 @@ name: generate breakout svg
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # daily at 01:00 UTC
+    - cron: "0 1 * * *"   # daily 01:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -13,11 +13,11 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate SVG (defaults)
-        uses: cyprieng/github-breakout@v1
+      - name: Generate SVGs (defaults)
+        uses: cyprieng/github-breakout@v1.0.0
         with:
           github_username: ${{ github.repository_owner }}
 
@@ -27,12 +27,12 @@ jobs:
           mv output/light.svg /tmp/breakout/breakout-light.svg
           mv output/dark.svg  /tmp/breakout/breakout-dark.svg
 
-      - name: Configure Git identity
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit to orphan branch `github-breakout`
+      - name: Commit to orphan branch github-breakout
         run: |
           git checkout --orphan github-breakout
           git rm -rf . || true
