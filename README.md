@@ -6,12 +6,11 @@
   <img src="https://komarev.com/ghpvc/?username=sic4riodragon&label=Profile%20views&color=0e75b6&style=flat" alt="sic4riodragon" />
 </p>
 
-<!-- Breakout game from my contribution graph -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sic4rioDragon/Sic4rioDragon/github-breakout/images/breakout-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sic4rioDragon/Sic4rioDragon/github-breakout/images/breakout-light.svg" />
-    <img alt="Breakout powered by my GitHub contributions" src="https://raw.githubusercontent.com/Sic4rioDragon/Sic4rioDragon/github-breakout/images/breakout-light.svg" />
+    <source media="(prefers-color-scheme: dark)"  srcset="images/breakout-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="images/breakout-light.svg" />
+    <img alt="Breakout powered by my GitHub contributions" src="images/breakout-light.svg" />
   </picture>
 </p>
 
