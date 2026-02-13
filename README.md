@@ -6,14 +6,6 @@
   <img src="https://komarev.com/ghpvc/?username=sic4riodragon&label=Profile%20views&color=0e75b6&style=flat" alt="sic4riodragon" />
 </p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="images/breakout-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="images/breakout-light.svg" />
-    <img alt="Breakout powered by my GitHub contributions" src="images/breakout-light.svg" />
-  </picture>
-</p>
-
 <!-- Trophies -->
 <p align="left">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
