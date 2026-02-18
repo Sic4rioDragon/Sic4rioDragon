@@ -2,11 +2,15 @@ name: generate breakout svg
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # daily 01:00 UTC (~03:00/02:00 Europe/Vienna depending on DST)
+    - cron: "0 1 * * *"
   workflow_dispatch:
+
+env:
+  ENABLED: "true"   # ← change to "false" to disable
 
 jobs:
   generate-svg:
+    if: env.ENABLED == 'false'
     permissions:
       contents: write
     runs-on: ubuntu-latest
